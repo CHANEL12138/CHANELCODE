@@ -1,5 +1,4 @@
-import Reflect.bean.User;
-
+import bean.User;
 import java.io.FileReader;
 import java.util.Properties;
 
