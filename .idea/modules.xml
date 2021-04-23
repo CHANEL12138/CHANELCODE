@@ -5,9 +5,16 @@
       <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CHANELCODE.iml" filepath="$PROJECT_DIR$/.idea/CHANELCODE.iml" />
       <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumLearn/EnumLearn.iml" filepath="$PROJECT_DIR$/EnumLearn/EnumLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExceptionLearn/ExceptionLearn.iml" filepath="$PROJECT_DIR$/ExceptionLearn/ExceptionLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExtendLearn/ExtendLearn.iml" filepath="$PROJECT_DIR$/ExtendLearn/ExtendLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/Homework/Homework.iml" filepath="$PROJECT_DIR$/Homework/Homework.iml" />
       <module fileurl="file://$PROJECT_DIR$/IOLearn/IOLearn.iml" filepath="$PROJECT_DIR$/IOLearn/IOLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Other/Other.iml" filepath="$PROJECT_DIR$/Other/Other.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reflect/Reflect.iml" filepath="$PROJECT_DIR$/Reflect/Reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" filepath="$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" filepath="$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" />
     </modules>
   </component>
 </project>
