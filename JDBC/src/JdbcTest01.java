@@ -4,7 +4,7 @@ import java.util.ResourceBundle;
 
 public class JdbcTest01 {
     public static void main(String[] args) {
-        ResourceBundle rs = ResourceBundle.getBundle("Database");
+        ResourceBundle rs = ResourceBundle.getBundle("MysqlDatabase");
 
         String username = rs.getString("username");
         String password = rs.getString("password");
