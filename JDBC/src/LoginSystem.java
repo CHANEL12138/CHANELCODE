@@ -7,8 +7,13 @@ import java.util.Scanner;
 
 public class LoginSystem {
     public static void main(String[] args) {
-        Map<String,String> LoginMap = Init();
+        Map<String, String> LoginMap = Init();
         boolean IsLogin = Login(LoginMap);
+        System.out.println(IsLogin);
+
+
+
+
 
 
     }
@@ -23,10 +28,12 @@ public class LoginSystem {
 
 
         Connection conn = null;
-
+        PreparedStatement ps = null;
+        boolean isLogin = false;
         try {
             Class.forName(SqlType);
-            conn = DriverManager.getConnection(conninfo,LoginU,LoginP);
+            conn = DriverManager.getConnection(conninfo, LoginU, LoginP);
+            isLogin = conn.isValid(2000);
 
 
 
@@ -37,7 +44,7 @@ public class LoginSystem {
             e.printStackTrace();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();
@@ -46,8 +53,7 @@ public class LoginSystem {
                 }
             }
         }
-
-
+        return isLogin;
     }
 
 
