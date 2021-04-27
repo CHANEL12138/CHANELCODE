@@ -1,4 +1,4 @@
-package Apriltf;
+package April;
 
 public class Student {
     String stuNo;
