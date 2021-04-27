@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--post不显示提交信息-->
+<form action="127.0.0.1" method="post">
+
+  用户名
+  <input type="text" name="username"><br>
+  密码
+  <input type="password" name="password"><br>
+  确认密码
+  <input type="password"><br>
+  性别 <br>
+  <input type="radio" name="sex" value="male" checked >男 <br>
+  <input type="radio" name="sex" value="female">女 <br>
+  兴趣爱好
+  <input type="checkbox" name="hobby" value="1"> 爱好1
+  <input type="checkbox" name="hobby" value="2" checked> 爱好2
+  <input type="checkbox" name="hobby" value="3"> 爱好3
+  <br>
+  学历
+  <select name="scholar">
+    <option value="gz" selected>高中</option>
+    <option value="dx">大学</option>
+    <option value="zz">中专</option>
+    <option value="dz">大专</option>
+  </select>
+  <br>
+  简介
+  <textarea name="intro" cols="30" rows="10"></textarea>
+  <br>
+
+
+  <input type="hidden" name="hidden" value="111">
+<!--  网页上看不见 但是会提交黑服务器-->
+
+  <input type="file" >
+  <br>
+
+  <input type="submit" value="注册">
+<!--readonly 可提交和disabled-->
+<!--  maxlength 最多输入几个字符-->
+
+</form>
+
+
+
+
+</body>
+
+</html>
