@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="Click" onclick="alert('好家伙')">
+<script type="text/javascript" src="js/js1.js">
+    <!--    引文件时 这里代码没有用-->
+</script>
+
+
+<input type="button" value="计算234+2412" onclick="sum(234,2412)">
+<br>
+
+
+<script>
+    onload = function()
+    {
+        var b = document.getElementById("button1");
+        b.onclick = function () {
+            var target = document.getElementById("radio1");
+            target.type = function () {
+                if(target.type === "radio") type = "text"
+                if(target.type === "text") type = "radio"
+            }
+        }
+    }
+    //alert("123".MyString())
+
+    var e = new User(20,"zhangsan","Beijing");
+    var ee = e.no+200;
+    //var ee = e.GetName();
+    //alert(ee)
+
+</script>
+
+<input type="radio" id="radio1">
+<br>
+<input type="button" id="button1" value="转换">
+
+
+
+</body>
+</html>
