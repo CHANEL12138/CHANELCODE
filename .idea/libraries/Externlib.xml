@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Externlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.39-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../apache-tomcat-10.0.5/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../apache-tomcat-10.0.5/lib/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

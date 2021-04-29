@@ -56,6 +56,7 @@ public class AccountClient {
             case 2 :Withdraw();
             case 3 :Deposit();
             case 4 :Exit();
+            default:Exit();
         }
     }
     public int MenuPrint()

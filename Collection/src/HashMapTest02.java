@@ -32,8 +32,8 @@ equals方法有可能调用，也有可能不调用。
 public class HashMapTest02 {
     public static void main(String[] args) {
 
-        Collection.Student s1 = new Collection.Student("zhangsan");
-        Collection.Student s2 = new Collection.Student("zhangsan");
+        Student s1 = new Student("zhangsan");
+        Student s2 = new Student("zhangsan");
 
         // 重写equals方法之前是false
         //System.out.println(s1.equals(s2)); // false
@@ -46,7 +46,7 @@ public class HashMapTest02 {
 
         // s1.equals(s2)结果已经是true了，表示s1和s2是一样的，相同的，那么往HashSet集合中放的话，
         // 按说只能放进去1个。（HashSet集合特点：无序不可重复）
-        Set<Collection.Student> students = new HashSet<>();
+        Set<Student> students = new HashSet<>();
         students.add(s1);
         students.add(s2);
         System.out.println(students.size()); // 这个结果按说应该是1. 但是结果是2.显然不符合HashSet集合存储特点。怎么办？

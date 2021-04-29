@@ -1,4 +1,3 @@
-import Homework.Account;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,7 +27,7 @@ public class MapTest02 {
 //            System.out.println(in + s1);
 //        }
 
-        Map<Account , String> accountIntegerMap = new HashMap<>();
+        Map<Account,String> accountIntegerMap = new HashMap<>();
         Account a1 = new Account(339906,6000);
         Account a2 = new Account(339955,4500);
         accountIntegerMap.put(a1,"Chanel");

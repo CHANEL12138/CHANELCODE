@@ -10,16 +10,16 @@ public class GenericTest02 {
 
         // ArrayList<这里的类型会自动推断>()，前提是JDK8之后才允许。
         // 自动类型推断，钻石表达式！
-        List<Collection.Animal> myList = new ArrayList<>();
+        List<Animal> myList = new ArrayList<>();
 
-        myList.add(new Collection.Animal());
-        myList.add(new Collection.Cat());
-        myList.add(new Collection.Bird());
+        myList.add(new Animal());
+        myList.add(new Cat());
+        myList.add(new Bird());
 
         // 遍历
-        Iterator<Collection.Animal> it = myList.iterator();
+        Iterator<Animal> it = myList.iterator();
         while(it.hasNext()){
-            Collection.Animal a = it.next();
+            Animal a = it.next();
             a.move();
         }
 
