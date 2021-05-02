@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" filepath="$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" filepath="$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserAccountJavaWeb/UserAccountJavaWeb.iml" filepath="$PROJECT_DIR$/UserAccountJavaWeb/UserAccountJavaWeb.iml" />
     </modules>
   </component>
 </project>

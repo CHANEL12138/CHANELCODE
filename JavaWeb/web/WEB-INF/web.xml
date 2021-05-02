@@ -15,6 +15,11 @@
         <url-pattern>/one</url-pattern>
 <!--        这里是发起请求调用时才会创建对象-->
     </servlet-mapping>
+
+
+
+
+
     <servlet>
         <servlet-name>TwoServlet</servlet-name>
         <servlet-class>com.chanelproject.controller.TwoServlet</servlet-class>
@@ -25,6 +30,28 @@
         <servlet-name>TwoServlet</servlet-name>
         <url-pattern>/two</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ThreeServlet</servlet-name>
+        <servlet-class>com.chanelproject.controller.ThreeServlet</servlet-class>
+    </servlet>
+<servlet-mapping>
+    <servlet-name>ThreeServlet</servlet-name>
+    <url-pattern>/three</url-pattern>
+</servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FourServlet</servlet-name>
+        <servlet-class>com.chanelproject.controller.FourServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FourServlet</servlet-name>
+        <url-pattern>/four</url-pattern>
+    </servlet-mapping>
+
+
 
 
 </web-app>
