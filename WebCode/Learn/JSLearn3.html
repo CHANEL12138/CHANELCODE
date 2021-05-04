@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+onload = function () {
+  btn.onclick = function () {
+    var obj = document.getElementById("text").value
+    var regExp = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    var ok = regExp.test(obj)
+    var btn = document.getElementById("btn")
+
+    if(ok)
+    {
+      document.getElementById("error").innerText = "邮箱地址合法"
+    }
+    else
+    {
+      document.getElementById("error").innerText = "邮箱地址不合法"
+    }
+  }
+
+  var obj = document.getElementById("text")
+  obj.onfocus = function ()
+  {
+    document.getElementById("error").innerText = ""
+  }
+
+}
+
+
+
+
+
+
+</script>
+<body>
+
+<input type="text" id="text">
+<span id="error" style="color: red;font-size: 12px"></span>
+<br>
+<input type="button" id="btn" value="检测邮箱">
+
+
+</body>
+</html>
