@@ -47,11 +47,90 @@
         <servlet-class>com.chanelproject.controller.FourServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FourServlet</servlet-name>
-        <url-pattern>/four</url-pattern>
+    <servlet-name>FourServlet</servlet-name>
+    <url-pattern>/four</url-pattern>
+</servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FiveServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.FiveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FiveServlet</servlet-name>
+        <url-pattern>/five</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>SixServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.SixServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>SixServlet</servlet-name>
+    <url-pattern>/six</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>com.servletcontext.controller.ContextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/con</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.servletcontext.controller.RequestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SevenServlet</servlet-name>
+        <servlet-class>com.cookie.controller.SevenServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EightServlet</servlet-name>
+        <servlet-class>com.cookie.controller.EightServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HSServlet</servlet-name>
+        <servlet-class>com.httpsession.controller.HSServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.httpsession.controller.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HSServlet</servlet-name>
+        <url-pattern>/shop</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EightServlet</servlet-name>
+        <url-pattern>/cookie1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SevenServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/req</url-pattern>
     </servlet-mapping>
 
 
 
 
+
+
+
+
+
+
+    <session-config>
+        <session-timeout>5</session-timeout>
+<!--        session空闲销毁时间五分钟-->
+    </session-config>
 </web-app>
