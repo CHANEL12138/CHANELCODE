@@ -17,6 +17,9 @@ public class CourseMain {
         course1.addStudent("S5");
         course1.addStudent("S6");
         course1.addStudent("S7");
+        course2.addStudent("Peter Jones");
+        course2.addStudent("Steven Smith");
+
 
         System.out.println("Number of students in course1: " + course1.getNumberOfStudents());
         String[] students = course1.getStudents();
