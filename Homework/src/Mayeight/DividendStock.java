@@ -22,4 +22,5 @@ public class DividendStock extends Stock{
     public double getProfit(double currentPrice) {
         return super.getProfit(currentPrice)+getDividents();
     }
+
 }
