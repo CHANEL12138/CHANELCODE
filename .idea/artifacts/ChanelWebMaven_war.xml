@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ChanelWebMaven:war">
+    <output-path>$PROJECT_DIR$/ChanelWebMaven/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ChanelWebMaven</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ChanelWebMaven.war">
+      <element id="artifact" artifact-name="ChanelWebMaven:war exploded" />
+    </root>
+  </artifact>
+</component>

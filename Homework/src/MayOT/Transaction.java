@@ -38,6 +38,6 @@ public class Transaction {
     @Override
     public String toString() {
         return getDateCreated()+"    "+getAccount().getId()+"    "+
-                (isStatus() ?"W":"D")+"    "+getAmount()+"    "+getBalance();
+                (isStatus() ?"D":"W")+"    "+getAmount()+"    "+getBalance();
     }
 }

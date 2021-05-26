@@ -8,7 +8,7 @@ public class Account {
     private double balance;
     private java.util.Date dateCreated;
     //建立和交易关联一多关系的数据域
-    private ArrayList<Transaction> transactions;
+    private ArrayList<Transaction> transactions = new ArrayList<>();
 
     public Account() { dateCreated = new java.util.Date(); }
     public Account(String name, int id, double balance) {
@@ -36,18 +36,19 @@ public class Account {
         }
         else
         {
-            Transaction transaction = new Transaction(this,false,
-                    getBalance(),getBalance()-amount);
             setBalance(getBalance()-amount);
+            Transaction transaction = new Transaction(this,false,
+                amount,getBalance());
             addTrans(transaction);
         }
     }
 
     public void deposit(double amount) {
         //insert code
-        Transaction transaction = new Transaction(this,true,
-                getBalance(),getBalance()+amount);
         setBalance(getBalance()+amount);
+        Transaction transaction = new Transaction(this,true,
+                amount,getBalance());
+        addTrans(transaction);
     }
 
     @Override

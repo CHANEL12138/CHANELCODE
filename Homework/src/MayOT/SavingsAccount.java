@@ -1,6 +1,5 @@
 package MayOT;
 
-import java.util.Date;
 
 public class SavingsAccount extends Account{
 
@@ -8,8 +7,6 @@ public class SavingsAccount extends Account{
 
     public SavingsAccount(String name, int id, double balance) {
         super(name,id,balance);
-        Date dateCreated = super.getDateCreated();
-        dateCreated = new Date();
     }
     public static double getAnnualInterestRate() {
         return AnnualInterestRate;
@@ -31,6 +28,6 @@ public class SavingsAccount extends Account{
     public String toString() {
         return "SavingsAccount [MonthlyInterest="+getMonthlyInterest()+", " +
                 "Id="+getId()+", " +
-                "Balance="+getBalance()+", Name="+getName()+", DateCreated="+getDateCreated();
+                "Balance="+getBalance()+", Name="+getName()+", DateCreated="+getDateCreated()+"]";
     }
 }

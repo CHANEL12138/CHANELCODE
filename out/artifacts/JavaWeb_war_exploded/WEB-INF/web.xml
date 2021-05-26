@@ -119,4 +119,18 @@
         <servlet-name>RequestServlet</servlet-name>
         <url-pattern>/req</url-pattern>
     </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+    <session-config>
+        <session-timeout>5</session-timeout>
+<!--        session空闲销毁时间五分钟-->
+    </session-config>
 </web-app>

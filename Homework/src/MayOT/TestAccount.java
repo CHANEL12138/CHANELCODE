@@ -40,7 +40,7 @@ public class TestAccount {
     }
     public static void printAllTrans(Account a){
         //补充代码
-        System.out.println("Date        AccountID    Type    Amount    Balance");
+        System.out.println("Date                         AccountID Type  Amount  Balance");
         ArrayList<Transaction> transactions = a.getTransactions();
         for(int i = 0;i<transactions.size();i++)
         {
