@@ -5,8 +5,45 @@
 <configuration>
 
     <properties resource="dbconfig.properties"/>
-    <environments default="development">
-        <environment id="development">
+
+
+<settings>
+    <setting name="mapUnderscoreToCamelCase" value="true" />
+    <!--        开启驼峰命名法  在数据库中的last_name字段会自动译为lastName 提供给其封装        -->
+</settings>
+
+    <typeAliases>
+<!--别名处理器-->
+<!--        <typeAlias type="com.chanelcode.mybatis.bean.Employee" alias="emp"/>
+为Type这个类取一个别名alias 默认就是小写类名
+-->
+
+     <package name="com.chanelcode.mybatis.bean" />
+<!--   在这个包下批量起别名 默认为类名字小写（大小写无区别）  如果包下有两个相同名字的类 采用第三种方法起别名
+-->
+<!--    在使用package的同时使用@Alias注解起新名字      -->
+    </typeAliases>
+
+
+<!--environments 环境们， default标签配合environment的id使用
+id为一个具体环境的唯一标识符 切换不同环境就更改default为想要切换的环境的id-->
+    <environments default="mysql">
+
+        <environment id="sqlserver">
+            <transactionManager type="JDBC"/>
+<!--            事务管理器   JDBC|MANAGED
+-->
+            <dataSource type="POOLED">
+                <!--            datasource 数据源 UNPOOLED|POOLRD|JNDI-->
+                <property name="driver" value="${ss.driver}"/>
+                <property name="url" value="${ss.url}"/>
+                <property name="username" value="${ss.username}"/>
+                <property name="password" value="${ss.password}"/>
+            </dataSource>
+        </environment>
+
+        
+        <environment id="mysql">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="${jdbc.driver}"/>
@@ -18,9 +55,27 @@
     </environments>
 
 
+
+    <databaseIdProvider type="DB_VENDOR">
+    <!--        多数据库厂商-->
+        <property name="MySQL" value="mysql"/>
+        <property name="Oracle" value="oracle"/>
+        <property name="SQL Server" value="sqlserver"/>
+
+    </databaseIdProvider>
+
     <mappers>
         <mapper resource="EmployeeMapper.xml"/>
+<!--       resource引用类路径下的映射文件
+url引用网络或本地路径下的文件
+class引用接口
+1、有sql映射文件 文件必须同名 放在与接口同目录下
+2、没有映射文件 可以用注解写在接口方法上
+
+
+  package批量注册 也要将映射文件放在同目录下
+
+-->
+        <mapper class="com.chanelcode.mybatis.dao.EmpAnnotation"/>
     </mappers>
-
-
 </configuration>

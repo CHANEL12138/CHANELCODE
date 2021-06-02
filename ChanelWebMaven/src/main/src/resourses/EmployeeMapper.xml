@@ -4,11 +4,47 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <mapper namespace="com.chanelcode.mybatis.dao.EmployeeMapper">
-    <select id="getEmpById" resultType="com.chanelcode.mybatis.bean.Employee">
-        select id,last_name lastName,email,gender from mybatis.employee where id = #{id}
+
+    <select id="getEmpById" resultType="emp" databaseId="mysql">
+        select * from mybatis.employee where id = #{id}
     </select>
+
+<!--SQL server 映射-->
+<!--    <select id="getEmpById" resultType="emp" databaseId="sqlserver">-->
+<!--    select * from employee where id = #{id}-->
+<!--    </select>-->
+<!-- -->
+<!--
+useGeneratedKeys="true" 表示使用自增主键，
+keyProperty="id" 获取到主键后封装到传进来Bean类的哪一个属性下
+-->
+    <insert id="AddEmp" useGeneratedKeys="true" keyProperty="id">
+        insert into mybatis.employee(last_name, gender, email)
+            values (#{lastname},#{gender},#{email})
+    </insert>
+
+
+    <update id="updateEmp">
+        update mybatis.employee
+        set last_name=#{lastname},email=#{email},gender=#{gender}
+        where id=#{id}
+    </update>
+
+
+    <delete id="deleteEmp">
+        delete from mybatis.employee
+        where id=#{id}
+    </delete>
+<!--        public void getEmpByIdAndLastname(Integer id,String lastname);-->
+    <select id="getEmpByIdAndLastname" resultType="emp">
+        select * from mybatis.employee where id=#{id} and last_name=#{lastname}
+    </select>
+
+    <select id="getEmpByMap" resultType="emp">
+        select * from mybatis.employee where id=#{id} and last_name=#{lastname}
+    </select>
+
 </mapper>
 <!--
 
@@ -16,5 +52,41 @@ namespcace:名称空间，指定为接口全类名
 id 唯一标识
 resultType 返回值类型
 #{id} 传过来的id值
+
+-->
+<!--
+在查询方法中传入多个参数时，mybatis会进行map封装
+key=param1...paramN
+value=传入的参数
+#{}就是从map中获取指定的key值
+    <select id="getEmpByIdAndLastname">
+        select * from mybatis.employee where id=#{param1} and last_name=#{param2}
+    </select>
+或
+在mapper接口中明确传入的参数
+    public void getEmpByIdAndLastname(@Param("id")Integer id, @Param("lastname")String lastname);
+
+所以如果参数很多 又是类里面的
+那直接传入POJO 就行
+
+如果多个参数不是类中的 使用较少那传Map比较方便
+public Employee getEmpByMap(Map<String,Object> map);
+//map传入
+        Map<String,Object> map = new HashMap<>();
+        map.put("id",1);
+        map.put("lastname","Tom");
+        Employee employee4 = employeeMapper.getEmpByMap(map);
+        System.out.println(employee4);
+
+如果使用较多 编写一个TO(Transfer Object) 数据传输对象
+Page{
+        int index;
+        int size;
+
+}
+
+
+
+
 
 -->

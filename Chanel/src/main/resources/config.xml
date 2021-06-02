@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--1、set方法注入属性 需要有set方法-->
+<!--    <bean id="test" class="com.chanelcode.chanel.bean.Book">-->
+<!--        <property name="bName" value="数据库原理"></property>-->
+<!--        <property name="bNo" value="66421630"></property>-->
+<!--    </bean>-->
+
+<!--    2、有参构造方法注入属性 无需无参构造方法-->
+
+    <bean id="book" class="com.chanelcode.chanel.bean.Book">
+        <constructor-arg name="bName" value="计算机网络"></constructor-arg>
+        <constructor-arg name="bNo">
+            <value>
+                <![CDATA[
+                <南京>
+                ]]>
+            </value>
+        </constructor-arg>
+    </bean>
+
+
+
+</beans>

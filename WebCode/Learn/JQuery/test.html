@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css.css" type="text/css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
     <script>
-        $(function () {
-            $("#btn").click(function () {
-                alert('aaaaa')
-            })
-        });
+       $(function () {
+           $("#btn").click(
+
+               function () {
+                   $("#text").val($("#link").attr("href"))
+               }
+
+           )
+       })
 
 
 
@@ -22,8 +27,11 @@
 </head>
 <body>
 
+<a href="https://www.baidu.com" id="link"></a>
+
+
 
 <input type="button" id="btn" value="按钮">
-
+<input type="text" id="text" />
 </body>
 </html>
