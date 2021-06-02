@@ -8,7 +8,14 @@
       <list>
         <option value="$PROJECT_DIR$/ChanelMaven/pom.xml" />
         <option value="$PROJECT_DIR$/ChanelWebMaven/pom.xml" />
+        <option value="$PROJECT_DIR$/Chanel/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring5/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Chanel/Spring/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="15" project-jdk-type="JavaSDK">
