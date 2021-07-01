@@ -3,8 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-
 <mapper namespace="com.chanelcode.mybatis.dao.EmployeeMapper">
+
+    <select id="getMapByLastName" resultType="map">
+        select * from mybatis.employee where last_name like #{lastname}
+    </select>
+
+
+
+
+    <select id="getbyname" resultType="emp">
+        select * from mybatis.employee where last_name like #{lastname}
+    </select>
 
     <select id="getEmpById" resultType="emp" databaseId="mysql">
         select * from mybatis.employee where id = #{id}

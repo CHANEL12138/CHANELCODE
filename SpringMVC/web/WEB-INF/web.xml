@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+
+
+
+
+    <servlet>
+        <servlet-name>mymvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<!--        在启动时需要创建DispatchServlet对象-->
+<!--        tomcat启动后这个值越小越优先创建
+-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:config.xml</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+
+    </servlet>
+
+<servlet-mapping>
+    <servlet-name>mymvc</servlet-name>
+
+
+    <!--
+               使用框架的时候，url-pattern可以使用两种值
+               1.使用扩展名方式，语法 *.xxxx , xxxx时自定义扩展名。常用的方式 *.do, *.action, *.mvc等等
+                   http://localhost:8080/myweb/some.do
+                   http://localhost:8080?myweb/other.do
+               2.使用斜杠"/"
+                当你的项目使用了 / ，它会替换 tomcat 中的 default.
+        导致所有的静态资源都给DispatcherServlet处理，默认情况下DispatcherServlet没有处理静态资源的能力,
+        没有控制器对象能处理静态资源的访问,所以静态资源（html，js，图片，css）都是404
+
+        动态资源some.do可以访问，原因时我们程序中有MyController控制器对象，能处理some.do请求
+           -->
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<!--    <servlet>-->
+<!--        <servlet-name>ussd</servlet-name>-->
+<!--        <servlet-class>com.chanelcode.controller.Servletw</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ussd</servlet-name>-->
+<!--        <url-pattern>/one</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    在web.xml配置过滤器-->
+    <!--注册声明过滤器，解决post请求乱码的问题-->
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+
+        <!--设置项目中使用的字符编码-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+
+        <!--强制请求对象（HttpServletRequest）使用encoding编码的值-->
+        <init-param>
+            <param-name>forceRequestEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+
+        <!--强制应答对象（HttpServletResponse）-->
+        <init-param>
+            <param-name>forceResponseEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <!--
+        /*  : 表示强制所有的请求先通过过滤器处理
+        -->
+    <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+</web-app>

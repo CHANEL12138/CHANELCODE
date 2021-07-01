@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SpringMVC:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpringMVC_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SpringMV=/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SpringMV=" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Externlib" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.5.RELEASE" />
+          <element id="file-copy" path="$PROJECT_DIR$/../apache-tomcat-9.0.48/lib/jsp-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../apache-tomcat-9.0.48/lib/servlet-api.jar" />
+          <element id="library" level="project" name="jsp-api" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

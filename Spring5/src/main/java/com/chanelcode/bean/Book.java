@@ -27,4 +27,12 @@ public class Book {
                 ", bNo='" + bNo + '\'' +
                 '}';
     }
+
+    public String getbName() {
+        return bName;
+    }
+
+    public String getbNo() {
+        return bNo;
+    }
 }

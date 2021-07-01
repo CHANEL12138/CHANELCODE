@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/CHANELTRA" />
     <file type="web" url="file://$PROJECT_DIR$/ChanelWebMaven" />
   </component>
   <component name="MavenProjectsManager">
@@ -8,8 +9,12 @@
       <list>
         <option value="$PROJECT_DIR$/ChanelMaven/pom.xml" />
         <option value="$PROJECT_DIR$/ChanelWebMaven/pom.xml" />
-        <option value="$PROJECT_DIR$/Chanel/pom.xml" />
         <option value="$PROJECT_DIR$/Spring5/pom.xml" />
+        <option value="$PROJECT_DIR$/CHANELTRA/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVCProJect/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

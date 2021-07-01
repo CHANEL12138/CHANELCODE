@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MybatisTest {
@@ -104,4 +105,37 @@ public class MybatisTest {
         openSession.close();
 
     }
+
+    @Test
+    public void TestList() throws IOException
+    {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession open = sqlSessionFactory.openSession();
+        EmployeeMapper mapper = open.getMapper(EmployeeMapper.class);
+
+        List<Employee> list = mapper.getbyname("%e%");
+        for(Employee employee : list)
+        {
+            System.out.println(employee);
+        }
+        open.close();
+    }
+
+//    测试封装map
+    @Test
+    public void Testmap() throws IOException
+    {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession open = sqlSessionFactory.openSession();
+        EmployeeMapper mapper = open.getMapper(EmployeeMapper.class);
+
+        Map<String, Employee> mapByLastName = mapper.getMapByLastName("%n");
+        System.out.println(mapByLastName);
+
+        open.close();
+    }
+
+
+
+
 }

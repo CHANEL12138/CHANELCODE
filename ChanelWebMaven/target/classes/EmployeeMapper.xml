@@ -3,8 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-
 <mapper namespace="com.chanelcode.mybatis.dao.EmployeeMapper">
+
+    <select id="getMapByLastName" resultType="map">
+        select * from mybatis.employee where last_name like #{lastname}
+    </select>
+
+
+
+
+    <select id="getbyname" resultType="emp">
+        select * from mybatis.employee where last_name like #{lastname}
+    </select>
 
     <select id="getEmpById" resultType="emp" databaseId="mysql">
         select * from mybatis.employee where id = #{id}
@@ -69,7 +79,24 @@ value=传入的参数
 所以如果参数很多 又是类里面的
 那直接传入POJO 就行
 
-如果多个参数不是类中的 那传Map比较方便
+如果多个参数不是类中的 使用较少那传Map比较方便
+public Employee getEmpByMap(Map<String,Object> map);
+//map传入
+        Map<String,Object> map = new HashMap<>();
+        map.put("id",1);
+        map.put("lastname","Tom");
+        Employee employee4 = employeeMapper.getEmpByMap(map);
+        System.out.println(employee4);
+
+如果使用较多 编写一个TO(Transfer Object) 数据传输对象
+Page{
+        int index;
+        int size;
+
+}
+
+
+
 
 
 -->

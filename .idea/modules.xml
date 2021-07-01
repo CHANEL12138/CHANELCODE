@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CHANELCODE.iml" filepath="$PROJECT_DIR$/.idea/CHANELCODE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chanel/Chanel.iml" filepath="$PROJECT_DIR$/Chanel/Chanel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHANELTRA/CHANELTRA.iml" filepath="$PROJECT_DIR$/CHANELTRA/CHANELTRA.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChanelMaven/ChanelMaven.iml" filepath="$PROJECT_DIR$/ChanelMaven/ChanelMaven.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChanelWebMaven/ChanelWebMaven.iml" filepath="$PROJECT_DIR$/ChanelWebMaven/ChanelWebMaven.iml" />
       <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
@@ -18,10 +18,16 @@
       <module fileurl="file://$PROJECT_DIR$/Other/Other.iml" filepath="$PROJECT_DIR$/Other/Other.iml" />
       <module fileurl="file://$PROJECT_DIR$/Reflect/Reflect.iml" filepath="$PROJECT_DIR$/Reflect/Reflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring5/Spring5.iml" filepath="$PROJECT_DIR$/Spring5/Spring5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot/SpringBoot.iml" filepath="$PROJECT_DIR$/SpringBoot/SpringBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVCProJect/SpringMVCProject.iml" filepath="$PROJECT_DIR$/SpringMVCProJect/SpringMVCProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" filepath="$PROJECT_DIR$/ThreadLearn/ThreadLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" filepath="$PROJECT_DIR$/ThreadSafe/ThreadSafe.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserAccountJavaWeb/UserAccountJavaWeb.iml" filepath="$PROJECT_DIR$/UserAccountJavaWeb/UserAccountJavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring5AOP/src/main/main.iml" filepath="$PROJECT_DIR$/Spring5AOP/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring5AOP/src/test/test.iml" filepath="$PROJECT_DIR$/Spring5AOP/src/test/test.iml" />
     </modules>
   </component>
 </project>

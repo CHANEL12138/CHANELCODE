@@ -3,10 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--set方法注入属性-->
-<bean id="book" class="com.chanelcode.bean.Book">
+<bean id="book0" class="com.chanelcode.bean.Book">
     <property name="bNo" value="189793842"></property>
     <property name="bName" value="计算机网络"></property>
 </bean>
+
+    <bean id="books" class="com.chanelcode.service.Books">
+        <constructor-arg name="book" ref="book0"></constructor-arg>
+    </bean>
+<!--    使用ref属性就可以将bean id 对应的对象等进行注入-->
+
+
 <!--构造函数方法-->
 <bean id="book1" class="com.chanelcode.bean.Book">
     <constructor-arg name="bName">

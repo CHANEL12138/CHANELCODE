@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    注入数组 集合 Map
+Stu
+-->
+
+<bean id="stu" class="com.chanelcode.bean.Stu">
+    <property name="courses">
+        <array>
+            <value>String1</value>
+            <value>String2</value>
+        </array>
+    </property>
+
+    <property name="list">
+        <list>
+            <value>List1</value>
+            <value>List2</value>
+        </list>
+    </property>
+    <property name="map">
+        <map>
+            <entry key="1" value="one"></entry>
+            <entry key="2" value="two"></entry>
+        </map>
+    </property>
+    <property name="books">
+<!--        <ref bean="book"></ref>-->
+        <array>
+            <ref bean="book"></ref>
+            <ref bean="book22"></ref>
+        </array>
+    </property>
+
+</bean>
+    <bean id="book22" class="com.chanelcode.bean.Book">
+        <property name="bNo" value="sasdasd"></property>
+        <property name="bName" value="sadad"></property>
+    </bean>
+    <bean id="book" class="com.chanelcode.bean.Book">
+        <property name="bName" value="hahaha"></property>
+        <property name="bNo" value="2139023"></property>
+    </bean>
+
+
+
+    <bean id="facbook" class="com.chanelcode.bean.Factory" scope="singleton"></bean>
+<!--    工厂bean定义factory 返回book-->
+
+<!--    scope属性选择singleton单例类
+prototype多例类
+-->
+
+
+<!--    测试bean生命周期-->
+    <bean id="life" class="com.chanelcode.bean.BeanLife" init-method="initMethod" destroy-method="destoryMethod">
+        <property name="name" value="大肥"></property>
+    </bean>
+
+</beans>

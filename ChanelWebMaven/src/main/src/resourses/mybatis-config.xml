@@ -66,6 +66,7 @@ id为一个具体环境的唯一标识符 切换不同环境就更改default为�
 
     <mappers>
         <mapper resource="EmployeeMapper.xml"/>
+        <mapper resource="EmployeeMapperPlus.xml"/>
 <!--       resource引用类路径下的映射文件
 url引用网络或本地路径下的文件
 class引用接口

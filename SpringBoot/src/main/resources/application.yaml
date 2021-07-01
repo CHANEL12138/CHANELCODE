@@ -1,0 +1,9 @@
+mycar:
+  brand: 好家伙
+  price: 2030391
+pet:
+  name: Laji
+
+server:
+  servlet:
+    context-path: /world

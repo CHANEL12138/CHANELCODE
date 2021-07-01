@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -17,6 +19,25 @@ public class Test02 {
         }
         System.out.println(ss);
 
+
+    }
+
+@Test
+
+    public void Test()
+    {
+        String a = "abcdef";
+        StringBuffer b = new StringBuffer(a);
+
+
+        if(a.equals(b))
+        {
+            System.out.println("equals succc");
+        }
+        if (b.equals(a))
+        {
+            System.out.println("bssss");
+        }
 
     }
 }

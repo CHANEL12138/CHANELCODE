@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CHANELTRA:war">
+    <output-path>$PROJECT_DIR$/CHANELTRA/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>CHANELTRA</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="CHANELTRA.war">
+      <element id="artifact" artifact-name="CHANELTRA:war exploded" />
+    </root>
+  </artifact>
+</component>
