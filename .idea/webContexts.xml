@@ -3,6 +3,7 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/JavaWeb/web/hello2.jsp" value="file://$PROJECT_DIR$/JavaWeb/web" />
         <entry key="file://$PROJECT_DIR$/SpringMVC/web/WEB-INF/web.xml" value="file://$PROJECT_DIR$/SpringMVC/web" />
       </map>
     </option>

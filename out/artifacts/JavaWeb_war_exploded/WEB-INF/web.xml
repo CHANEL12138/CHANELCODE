@@ -99,6 +99,22 @@
         <servlet-name>CartServlet</servlet-name>
         <servlet-class>com.httpsession.controller.CartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JSPServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.JSPServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BmiServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.BmiServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProvinceServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.ProvinceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProCityServlet</servlet-name>
+        <servlet-class>com.chanelcode.controller.ProCityServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/cart</url-pattern>
@@ -121,13 +137,26 @@
     </servlet-mapping>
 
 
+<servlet-mapping>
+    <servlet-name>ProCityServlet</servlet-name>
+    <url-pattern>/pro1</url-pattern>
+</servlet-mapping>
 
 
+<servlet-mapping>
+    <servlet-name>JSPServlet</servlet-name>
+    <url-pattern>/jsp</url-pattern>
+</servlet-mapping>
 
+<servlet-mapping>
+    <servlet-name>ProvinceServlet</servlet-name>
+    <url-pattern>/pro</url-pattern>
+</servlet-mapping>
 
-
-
-
+<servlet-mapping>
+    <servlet-name>BmiServlet</servlet-name>
+    <url-pattern>/bmi</url-pattern>
+</servlet-mapping>
 
     <session-config>
         <session-timeout>5</session-timeout>

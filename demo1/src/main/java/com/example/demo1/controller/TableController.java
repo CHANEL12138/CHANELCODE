@@ -49,11 +49,11 @@ public class TableController {
         return "table/add";
     }
 
-    @GetMapping("/update")
-    public String updateTable()
-    {
-        return "table/update";
-    }
+//    @GetMapping("/update")
+//    public String updateTable()
+//    {
+//        return "table/update";
+//    }
 
     @GetMapping("/responsive_table")
     public String responsive_table()
@@ -78,13 +78,15 @@ public class TableController {
     @GetMapping("/update/{id}")
     public String UpdateUser(Model model,@PathVariable("id") Integer id,HttpSession session)
     {
+        System.out.println(id);
         session.setAttribute("id",id);
         User byId = userService.getById(id);
+        if(byId==null||id==null)return "redirect:/basic_table";
         model.addAttribute("id",byId.getId());
         model.addAttribute("name",byId.getName());
         model.addAttribute("age",byId.getAge());
         model.addAttribute("email",byId.getEmail());
-        return updateTable();
+        return "table/update";
     }
 
     @PostMapping("/execute")
@@ -99,6 +101,7 @@ public class TableController {
     @GetMapping("/delete/{id}")
     public String Delete(@PathVariable("id")Integer id)
     {
+
         userService.removeById(id);
         return "redirect:/basic_table";
     }

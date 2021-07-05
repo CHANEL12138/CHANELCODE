@@ -40,6 +40,7 @@ public class IndexController {
         }
         model.addAttribute("msg","用户名密码错误");
         return "login";
+
     }
 
 
@@ -55,5 +56,7 @@ public class IndexController {
     {
         return "common";
     }
+
+
 
 }

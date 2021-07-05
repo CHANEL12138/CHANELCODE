@@ -55,6 +55,47 @@ keyProperty="id" 获取到主键后封装到传进来Bean类的哪一个属性�
         select * from mybatis.employee where id=#{id} and last_name=#{lastname}
     </select>
 
+
+
+
+
+    <select id="danamicsql" resultType="emp">
+        select * from mybatis.employee
+
+<where>
+    <if test="last_name!=null and last_name!=''">
+        and last_name like '%' #{last_name} '%'
+    </if>
+</where>
+    </select>
+
+
+
+
+
+<!--
+        foreach标签
+        collection 标识类型
+               array：数组
+               list：集合
+        item：每一次遍历的元素
+        open：开始符号
+        close：结束符号
+        separator：元素与元素之间的分隔符
+        select * from mybatis.employee where last_name in
+（?,?,?，.......）
+
+-->
+
+    <select id="danamicsql1" resultType="emp">
+        select * from mybatis.employee where id in
+<foreach collection="array" item="id" open="(" close=")" separator=",">
+                #{id}
+</foreach>
+    </select>
+
+
+
 </mapper>
 <!--
 

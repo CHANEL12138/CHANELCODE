@@ -136,6 +136,29 @@ public class MybatisTest {
     }
 
 
+    @Test
+    public void Testdynamicsql() throws IOException
+    {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession open = sqlSessionFactory.openSession();
+
+        EmployeeMapper mapper = open.getMapper(EmployeeMapper.class);
+        List<Employee> e = mapper.danamicsql("o");
+        System.out.println(e);
+    }
+
+    @Test
+    public void Testdynamicsql1() throws IOException
+    {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession open = sqlSessionFactory.openSession();
+
+        EmployeeMapper mapper = open.getMapper(EmployeeMapper.class);
+        String[] array = {"1","3"};
+        List<Employee> list = mapper.danamicsql1(array);
+        System.out.println(list);
+    }
+
 
 
 }

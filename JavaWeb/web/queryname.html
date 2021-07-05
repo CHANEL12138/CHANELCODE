@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax获取名称</title>
+</head>
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+    // $(function () {
+    //     $("#btn").click(function () {
+    //         var id = $("#proid").val();
+    //         $.ajax(
+    //             {
+    //                 url:"pro",
+    //                 dataType:"json",
+    //                 data: {
+    //                   "id":id
+    //                 },
+    //                 success:function (data){
+    //                     $("#proname").val(data.name);
+    //                     $("#jiancheng").val(data.jiancheng);
+    //                     $("#shenghui").val(data.shenghui);
+    //                 }
+    //             }
+    //         )
+    //     })
+    // })
+
+
+
+    $(function () {
+        $.ajax(
+            {
+                url:"pro",
+                dataType: "json",
+                success:function (data) {
+                    $.each(data,function (k, v) {
+                        $("#pro").append("<option value="+v.id+">"+v.name+"</option>")
+                    })
+                }
+            }
+        )
+    })
+    function cj() {
+        $("#city").empty();
+        $.ajax(
+            {
+                url:"pro1",
+                dataType: "json",
+                data: {
+                    "id" : $("#pro").val()
+                },
+                success:function (data) {
+                    $.each(data,function (k, v) {
+                        $("#city").append("<option value="+v.id+">"+v.cityName+"</option>")
+                    })
+                }
+            }
+        )
+    }
+
+
+
+    // function search() {
+    //
+    //     var id = document.getElementById("proid").value;
+    //
+    //
+    //
+    //
+    //     var xmlHttp = new XMLHttpRequest();
+    //
+    //     xmlHttp.onreadystatechange=function () {
+    //         if(xmlHttp.readyState===4&&xmlHttp.status===200)
+    //         {
+    //             var data = xmlHttp.responseText;
+    //             var jsonData = eval("("+data+")");
+    //             document.getElementById("proname").value = jsonData.name;
+    //             document.getElementById("jiancheng").value = jsonData.jiancheng;
+    //             document.getElementById("shenghui").value = jsonData.shenghui;
+    //         }
+    //     }
+    //
+    //     xmlHttp.open("get","pro?id="+id,true);
+    //     xmlHttp.send();
+    // }
+
+</script>
+
+<body>
+<p>
+    根据省份id获取名称
+</p>
+<table>
+    <tr>
+        <td>省份编号</td>
+        <td><input type="text" id="proid">
+            <input type="button" value="搜索" id="btn">
+        </td>
+    </tr>
+
+    <tr>
+        <td>省份名称</td>
+        <td><input type="text" id="proname"></td>
+    </tr>
+    <tr>
+        <td>省份简称</td>
+        <td><input type="text" id="jiancheng"></td>
+    </tr>
+    <tr>
+        <td>省份省会</td>
+        <td><input type="text" id="shenghui"></td>
+    </tr>
+</table>
+<p>级联查询</p>
+选择省份：
+<select name="pro" id="pro" onchange="cj()">
+    <option value="0" id="default">请选择</option>
+</select>
+<br>
+选择城市：
+<select name="city" id="city">
+</select>
+
+</body>
+</html>

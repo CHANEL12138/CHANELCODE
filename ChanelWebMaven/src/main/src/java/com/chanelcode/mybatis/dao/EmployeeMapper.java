@@ -29,4 +29,8 @@ public interface EmployeeMapper {
 
     @MapKey("last_name")
     public Map<String,Employee> getMapByLastName(String lastname);
+
+    public List<Employee> danamicsql(String name);
+
+    public List<Employee> danamicsql1(String[] array);
 }
