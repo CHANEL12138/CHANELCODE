@@ -30,7 +30,7 @@ public class IndexController {
         Admin ad = adminServiceImp.getOne(new QueryWrapper<Admin>().eq("username", user.getUsername()));
         if(ad==null)
         {
-            model.addAttribute("msg","用户名密码错误");
+            session.setAttribute("msg","用户名密码错误");
             return "login";
         }
         else if(ad.getPassword().equals(user.getPassword()))

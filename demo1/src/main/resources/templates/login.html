@@ -9,8 +9,8 @@
 
     <title>Login</title>
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+    <link th:href="@{css/style-responsive.css}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,7 +29,7 @@
             <img src="images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <label style="color: red" th:text="${msg}"></label>
+            <label style="color: red" th:text="${session.msg}"></label>
             <input type="text" class="form-control" placeholder="User ID" autofocus name="username">
             <input type="password" class="form-control" placeholder="Password" name="password">
 
@@ -84,9 +84,9 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!-- Placed js at the end of the document so the pages load faster -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.min.js"></script>
+<script th:src="@{js/jquery-1.10.2.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+<script th:src="@{js/modernizr.min.js}"></script>
 
 </body>
 </html>
